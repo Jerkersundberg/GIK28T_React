@@ -21,7 +21,7 @@ class Images extends React.Component {
       <div>
         <h1>Images</h1>
         {img.map((image) => (
-          <div className="card">
+          <div className="card" key={image._id}>
             <img src={image.imageUrl} alt={image.tags} />
             <h3>{image.tags}</h3>
           </div>

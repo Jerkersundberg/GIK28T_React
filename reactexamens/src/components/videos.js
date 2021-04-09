@@ -20,10 +20,10 @@ class Videos extends React.Component {
   render() {
     const vids = this.state.videos;
     return (
-      <div>
+      <div >
         {vids.map((video) => (
-          <div className="card">
-            <video width="400" controls>
+          <div className="card" key={video._id} >
+            <video  width="400" controls >
               <source src={video.videoUrl} type={video.fileType} />
               Your browser does not support HTML video.
             </video>
